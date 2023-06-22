@@ -1,23 +1,45 @@
 {
   "name": "ui",
   "version": "0.0.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "license": "MIT",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist",
+    "./styles.css": "./dist/index.css"
+  },
   "scripts": {
     "lint": "eslint *.ts*",
     "build": "rollup --config",
-    "dev": "pnpm run build -- --watch"
+    "dev": "rollup --config --watch"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^8.5.0",
-    "@types/react": "^18.2.5",
-    "@types/react-dom": "^18.2.4",
-    "eslint": "^7.32.0",
+    "@rollup/plugin-commonjs": "latest",
+    "@rollup/plugin-json": "latest",
+    "@rollup/plugin-node-resolve": "latest",
+    "@rollup/plugin-typescript": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
     "eslint-config-custom": "workspace:*",
-    "react": "^18.2.0",
-    "rollup": "^2.79.0",
+    "postcss": "latest",
+    "react": "latest",
+    "rollup": "latest",
+    "rollup-plugin-peer-deps-external": "latest",
+    "rollup-plugin-postcss": "latest",
+    "rollup-plugin-preserve-directives": "latest",
+    "rollup-plugin-typescript2": "latest",
+    "tailwind-config": "workspace:*",
+    "tailwindcss": "latest",
     "tsconfig": "workspace:*",
-    "typescript": "^4.5.2"
+    "tslib": "latest",
+    "typescript": "latest",
+    "typescript-plugin-styled-components": "latest"
+  },
+  "peerDependencies": {
+    "react": "latest",
+    "styled-components": "latest"
   }
 }

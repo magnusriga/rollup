@@ -5,15 +5,18 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "clean": "turbo clean",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
+    "eslint": "latest",
     "eslint-config-custom": "workspace:*",
-    "prettier": "^2.5.1",
-    "turbo": "latest"
-  }
+    "prettier": "latest",
+    "prettier-plugin-tailwindcss": "latest",
+    "turbo": "canary"
+  },
+  "packageManager": "pnpm@8.6.3"
 }
